@@ -1,5 +1,5 @@
-import { validaCPF } from './modules/validaCpf.js'
-import { geraCpf } from './modules/geraCpf.js'
+import { validaCPF } from './validators/validaCpf.js'
+import { geraCpf } from './generators/geraCpf.js'
 import './css/style.css'
 
 console.log(validaCPF(""))
