@@ -2,8 +2,13 @@ import { validaCPF } from './validators/validaCpf.js'
 import { geraCpf } from './generators/geraCpf.js'
 import './css/style.css'
 
-
+//Carregar paginas
 const conteudo = document.getElementById('content')
+
+document.addEventListener('DOMContentLoaded', () => {
+    const defaultLink = document.querySelector('.default')
+    if (defaultLink) carregaPagina(defaultLink)
+})
 
 document.addEventListener('click', e =>{
     const el = e.target
@@ -15,11 +20,22 @@ document.addEventListener('click', e =>{
     }
 })
 async function carregaPagina(el){
-    const href = el.getAttribute('href')
-    const response = await fetch(href)
-
-    if(response.status !== 200) return
-
-    const html = await response.text()
-    conteudo.innerHTML = html
+    try{
+        const href = el.getAttribute('href')
+        const response = await fetch(href)
+    
+        if(response.status !== 200) return
+    
+        const html = await response.text()
+        conteudo.innerHTML = html
+    } catch(e){
+        console.log('ERRO AO CARREGAR A PAGINA!!')
+    }
 }
+
+//interatividade dos botoes
+document.addEventListener('click', e => {
+    const el = e.target
+
+    //if(el.classList.contains())
+})

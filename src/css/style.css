@@ -35,3 +35,89 @@ a, a:active, a:visited{
 #conteiner-dados{
     align-items: center ;
 }
+
+/**/
+
+#conteiner-dados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    min-height: 80vh;
+}
+.content-dados {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 16px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+.content-dados p {
+    color: #f1f5f9;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.content-dados input {
+    padding: 17px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #3f4042;
+    color: #fff;
+    font-size: 14px;
+}
+.actions {
+    display: flex;
+    gap: 10px;
+}
+.actions button {
+    flex: 1;
+    padding: 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+}
+.actions .gerar {
+    background: #3b82f6;
+}
+
+.actions .gerar:hover {
+    background: #2563eb;
+}
+.actions .validar {
+    background: #22c55e;
+}
+.actions .validar:hover {
+    background: #16a34a;
+}
+.copiar {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.2s;
+}
+.copiar:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+.linha-pequena {
+    display: flex;
+    gap: 10px;
+}
+
+.linha-pequena input {
+    flex: 1;
+}
