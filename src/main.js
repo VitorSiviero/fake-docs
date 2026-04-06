@@ -36,6 +36,13 @@ async function carregaPagina(el){
 //interatividade dos botoes
 document.addEventListener('click', e => {
     const el = e.target
-
-    //if(el.classList.contains())
+    if (el.id.contains('cpfcopiar')) {
+        console.log('elemento copiado')
+    }
+    if (el.id.contains('cpfgerar')) {
+        console.log('elemento gerado')
+    }
+    if (el.id.contains('cpfvalidar')) {
+        console.log('elemento validado')
+    }
 })
