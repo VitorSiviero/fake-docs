@@ -11,6 +11,8 @@ export const geraCpf = () =>{
     const primeiroDigito = criaDigito(base).toString()
     const segundoDigito = criaDigito(base + primeiroDigito).toString()
     
-    return base + primeiroDigito + segundoDigito
+    let cpf =  base + primeiroDigito + segundoDigito
+    cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4')
+    return cpf
 
 }
